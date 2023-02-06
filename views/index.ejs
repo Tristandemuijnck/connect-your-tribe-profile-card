@@ -1,8 +1,93 @@
 <%- include('./partials/head') %>
 
-<article>
-  <h1>Hallo wereld!</h1>
-  <p>Alles werk! Laat dit visitekaartje in je browser aan een docent zien :D</p>
-</article>
+<main>
+
+  <!-- Background Crosses -->
+  <div class="crossesMain">
+      <div class="cross"></div>
+      <div class="cross"></div>
+      <div class="cross"></div>
+  </div>
+
+  <!-- Homescreen -->
+  <section id="home" class="home">
+      <h1>Tristan</h1>
+      <!-- Clickable mouse voor scroll naar volgende section -->
+      <a href="#info">
+          <div class="scroll-down">
+              <div class="mouse">
+                  <div class="scroller"></div>
+              </div>
+          </div>
+      </a>
+  </section>
+
+
+  <!-- Card flip on click -->
+
+  <!-- Over mij & Studie -->
+  <section id="info" class="info">
+      <div class="card-face front-card">
+
+          <!-- Info div -->
+          <div class="over-mij">
+              <h1>Wie ben ik</h1>
+              <img class="pf-img" src="./assets/pf.jpg" alt="profielfoto">
+              <p>Ik ben Tristan de Muijnck. Ik ben 20 jaar oud en woon in Amsterdam-Oost samen met mijn moeder, zus en stiefvader.</p>
+          </div>
+
+          <!-- Hobby div -->
+          <div class="hobby">
+              <h1>Hobby's</h1>
+              <p>Ik heb een aantal hobby's:</p>
+              <ul class="hobby-list" dir="rtl">
+                  <li>Voetballen</li>
+                  <li>Gamen</li>
+                  <li>Skateboarden</li>
+                  <li>Coderen</li>
+              </ul>
+
+              <!-- Cirkel voor klik hint -->
+              <div class="circle" style="animation-delay: -3s"></div>
+              <div class="circle" style="animation-delay: -2s"></div>
+              <div class="circle" style="animation-delay: -1s"></div>
+              <div class="circle" style="animation-delay: 0s"></div>
+          </div>
+      </div>
+
+      <div class="card-face back-card">
+          
+          <!-- Studie div -->
+          <div class="over-mij">
+              <h1>Studie</h1>
+              <p>Ik heb mijn HAVO diploma behaald aan het St. Nicolaas Lyceum in Amsterdam, daarna heb ik de opleiding applicatieontwikkelaar afgerond op het MBO Hilversum.</p>
+              <p>Op dit moment volg ik de AD Frontend Design & Development aan de HvA.</p>
+          </div>
+
+          <!-- Skills div -->
+          <div class="skills">
+              <h1>Skills</h1>
+              <p>Tijdens mijn opleiding tot applicatieontwikkelaar heb ik gewerkt met verschillende talen en frameworks:</p>
+              <div class="talen">
+                  <div class="taal">Html</div>
+                  <div class="taal">CSS</div>
+                  <div class="taal">PHP</div>
+                  <div class="taal">JavaScript</div>
+                  <div class="taal">Java</div>
+                  <div class="taal">jQuery</div>
+                  <div class="taal">Python</div>
+                  <div class="taal">Bootstrap 5</div>
+              </div>
+              <!-- Cirkel voor klik hint -->
+              <div class="circle" style="animation-delay: -3s"></div>
+              <div class="circle" style="animation-delay: -2s"></div>
+              <div class="circle" style="animation-delay: -1s"></div>
+              <div class="circle" style="animation-delay: 0s"></div>
+          </div>
+      </div>
+  </section>
+
+</main>
+<script src="./scripts/script.js"></script>
 
 <%- include('./partials/foot') %>

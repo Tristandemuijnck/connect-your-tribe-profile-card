@@ -1,0 +1,417 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+/* Crosses */
+.crossesMain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 40%;
+}
+  
+.cross{
+    width: 33%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    background: red;
+    height: 200px;
+    position: relative;
+    width: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+  
+.cross:after {
+    background: red;
+    content: "";
+    height: 40px;
+    left: -80px;
+    position: absolute;
+    top: 80px;
+    width: 200px;
+    transform: rotate(0deg);
+}
+
+/* Home section */
+.home{
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/* Info section */
+.info{
+    color: white;
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    transform-style: preserve-3d;
+    transition: transform 1.5s ease-in-out;
+    transform-origin: center right;
+    position: relative;
+    z-index: 5;
+    -webkit-tap-highlight-color: transparent;
+    background: rgba(30, 30, 31, 0.65);
+}
+
+.info.is-flipped{
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+/* Card Face */
+.card-face{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+/* Front card */
+.front-card{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+    cursor: pointer;
+}
+
+/* Back card */
+.back-card{
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+    cursor: pointer;
+}
+
+/* Scroll down muis */
+.scroll-down{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto 10px auto;
+    width: 34px;
+    height: 55px;
+}
+
+.mouse{
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller{
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
+
+/* MOBILE CSS --------------------------------------------------------- */
+@media (max-width: 425px){ 
+    
+    /* Home section */
+    .home h1{
+        font-size: 2rem;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 2px;
+        width: auto;
+        margin: auto;
+        font-variant: small-caps;
+        border-style: solid none;
+    }
+
+    /* Over mij */
+    .over-mij{
+        padding: 5%;
+    }
+
+    .over-mij h1{
+        text-align: left;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .over-mij p{
+        text-align: left;
+        font-size: 0.9em;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .pf-img{
+        width: 70%;
+        height: auto;
+        border-radius: 2px;
+        border: solid 1px white;
+    }
+
+    /* Hobby */
+    .hobby{
+        padding: 5%;
+    }
+
+    .hobby h1{
+        text-align: right;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .hobby p{
+        text-align: right;
+        font-size: 0.9em;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .hobby-list{
+        padding: 5px;
+        font-size: 0.9em;
+        font-family: 'Raleway', sans-serif;
+        text-align: right;
+        list-style: none;
+        float: right;
+    }
+
+    /* Skills */
+    .skills{
+        padding: 5%;
+    }
+
+    .skills h1{
+        text-align: right;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .skills p{
+        text-align: right;
+        font-size: 0.9em;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    /* Talen */
+    .talen{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        float: right;
+        padding-left: 25%;
+    }
+
+    .taal{
+        border: solid 1px white;
+        padding: 5px;
+        margin: 5px;
+        font-size: 0.9em;
+        font-family: 'Raleway', sans-serif;
+        float: right;
+    }
+
+
+
+    /* Hint circle */
+    .circle {
+        display: flex;
+        border-radius: 50%;
+        background-color: cyan;
+        width: 50px;
+        height: 50px;
+        margin-left: 2%;
+        position: absolute;
+        opacity: 0;
+        float: left;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+
+    @keyframes scaleIn{
+        from{
+            transform: scale(.5, .5);
+            opacity: .5;
+        }
+        to{
+            transform: scale(2.5, 2.5);
+            opacity: 0;
+        }
+    }
+
+}
+
+/* Desktop CSS */
+@media (min-width: 768px){
+
+    /* Home section */
+    .home h1{
+        font-size: 5rem;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 2px;
+        width: auto;
+        margin: auto;
+        font-variant: small-caps;
+        border-style: solid none;
+    }
+
+    /* Over mij */
+    .over-mij{
+        padding: 2%;
+        width: 50%;   
+        margin-right: auto; 
+    }
+
+    .over-mij h1{
+        text-align: left;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.3em;
+    }
+
+    .over-mij p{
+        text-align: left;
+        font-size: 1.3em;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .pf-img{
+        width: 20%;
+        height: auto;
+        border-radius: 2px;
+        border: solid 1px white;
+    }
+
+    /* Hobby */
+    .hobby{
+        padding: 2%;
+        width: 50%;
+        margin-left: auto;
+    }
+
+    .hobby h1{
+        text-align: right;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.3em;
+    }
+
+    .hobby p{
+        text-align: right;
+        font-size: 1.3em;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .hobby-list{
+        padding: 5px;
+        font-size: 1.3em;
+        font-family: 'Raleway', sans-serif;
+        text-align: right;
+        list-style: none;
+        float: right;
+    }
+
+    /* Skills */
+    .skills{
+        padding: 2%;
+        width: 50%;
+        margin-left: auto;
+    }
+
+    .skills h1{
+        text-align: right;
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.3em;
+    }
+
+    .skills p{
+        text-align: right;
+        font-size: 1.3em;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    /* Talen */
+    .talen{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        float: right;
+        padding-left: 25%;
+    }
+
+    .taal{
+        border: solid 1px white;
+        padding: 5px;
+        margin: 5px;
+        font-size: 1.3em;
+        font-family: 'Raleway', sans-serif;
+        float: right;
+    }
+
+    /* Hint circle */
+    .circle {
+        display: flex;
+        border-radius: 50%;
+        background-color: cyan;
+        width: 50px;
+        height: 50px;
+        margin-left: 2%;
+        position: absolute;
+        opacity: 0;
+        float: left;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+
+    @keyframes scaleIn{
+        from{
+            transform: scale(.5, .5);
+            opacity: .5;
+        }
+        to{
+            transform: scale(2.5, 2.5);
+            opacity: 0;
+        }
+    }
+
+    
+}
