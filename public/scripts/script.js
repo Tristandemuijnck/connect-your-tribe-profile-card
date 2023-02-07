@@ -1,5 +1,5 @@
-var infoCard = document.querySelector('.info');
+var infoCard = document.querySelector(".info");
 
-infoCard.addEventListener('click', ()=>{
-    infoCard.classList.toggle('is-flipped');
+infoCard.addEventListener("click", () => {
+    infoCard.classList.toggle("is-flipped");
 });

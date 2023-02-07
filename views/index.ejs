@@ -1,93 +1,74 @@
 <%- include('./partials/head') %>
 
 <main>
+    <!-- Background Crosses -->
+    <div class="crossesMain">
+        <div class="cross"></div>
+        <div class="cross"></div>
+        <div class="cross"></div>
+    </div>
 
-  <!-- Background Crosses -->
-  <div class="crossesMain">
-      <div class="cross"></div>
-      <div class="cross"></div>
-      <div class="cross"></div>
-  </div>
+    <!-- Hero section -->
+    <section id="hero">
+        <!-- Name in the middle -->
+        <h1><%- locals.content.name + " " + locals.content.prefix + " " + locals.content.surname %> </h1>
 
-  <!-- Homescreen -->
-  <section id="home" class="home">
-      <h1>Tristan</h1>
-      <!-- Clickable mouse voor scroll naar volgende section -->
-      <a href="#info">
-          <div class="scroll-down">
-              <div class="mouse">
-                  <div class="scroller"></div>
-              </div>
-          </div>
-      </a>
-  </section>
+        <!-- Scroller icon -->
+        <a href="#info" class="scroller">
+            <div class="scroll-down">
+                <div class="mouse">
+                    <div class="scroller"></div>
+                </div>
+            </div>
+        </a>
+    </section>
 
+    <!-- Info section -->
+    <section id="info">
+        <!-- Avatar -->
+        <img src="<%- locals.content.avatar %> " alt="Tristan naast een kasteel" class="pf-img">
 
-  <!-- Card flip on click -->
+        <!-- Info -->
+        <div class="info-text">
+            <p class="name"><%- locals.content.name + " " + locals.content.prefix + " " + locals.content.surname %></p>
+            <p class="bio"><%- locals.content.bio.html %> </p>
+            <p class="age">21</p>
+        </div>
+    </section>
 
-  <!-- Over mij & Studie -->
-  <section id="info" class="info">
-      <div class="card-face front-card">
+    <!-- Skills section -->
+    <section id="skills">
+        <div class="skills">
+            <div class="skill"><p>HTML</p></div>
+            <div class="skill"><p>CSS</p></div>
+            <div class="skill"><p>JavaScript</p></div>
+            <div class="skill"><p>PHP</p></div>
+            <div class="skill"><p>Python</p></div>
+            <div class="skill"><p>Java</p></div>
+        </div>
 
-          <!-- Info div -->
-          <div class="over-mij">
-              <h1>Wie ben ik</h1>
-              <img class="pf-img" src="./assets/pf.jpg" alt="profielfoto">
-              <p>Ik ben Tristan de Muijnck. Ik ben 20 jaar oud en woon in Amsterdam-Oost samen met mijn moeder, zus en stiefvader.</p>
-          </div>
+        <div class="socials">
+            <a class="social" href="#"><img src="" alt="LinkedIn Logo"></a>
+            <a class="social" href="https://github.com/<%- locals.content.gitHubHandle %>"><img src="" alt="GitHub Logo"></a>
+            <a class="social" href="#"><img src="" alt="Instagram Logo"></a>
+        </div>
+    </section>
 
-          <!-- Hobby div -->
-          <div class="hobby">
-              <h1>Hobby's</h1>
-              <p>Ik heb een aantal hobby's:</p>
-              <ul class="hobby-list" dir="rtl">
-                  <li>Voetballen</li>
-                  <li>Gamen</li>
-                  <li>Skateboarden</li>
-                  <li>Coderen</li>
-              </ul>
+    <!-- Extra section -->
+    <section id="extra">
+        <div class="hobbies">
+            <div class="hobby"><p>Voetbal</p></div>
+            <div class="hobby"><p>Gamen</p></div>
+            <div class="hobby"><p>Coding</p></div>
+            <div class="hobby"><p>Skateboarding</p></div>
+        </div>
 
-              <!-- Cirkel voor klik hint -->
-              <div class="circle" style="animation-delay: -3s"></div>
-              <div class="circle" style="animation-delay: -2s"></div>
-              <div class="circle" style="animation-delay: -1s"></div>
-              <div class="circle" style="animation-delay: 0s"></div>
-          </div>
-      </div>
-
-      <div class="card-face back-card">
-          
-          <!-- Studie div -->
-          <div class="over-mij">
-              <h1>Studie</h1>
-              <p>Ik heb mijn HAVO diploma behaald aan het St. Nicolaas Lyceum in Amsterdam, daarna heb ik de opleiding applicatieontwikkelaar afgerond op het MBO Hilversum.</p>
-              <p>Op dit moment volg ik de AD Frontend Design & Development aan de HvA.</p>
-          </div>
-
-          <!-- Skills div -->
-          <div class="skills">
-              <h1>Skills</h1>
-              <p>Tijdens mijn opleiding tot applicatieontwikkelaar heb ik gewerkt met verschillende talen en frameworks:</p>
-              <div class="talen">
-                  <div class="taal">Html</div>
-                  <div class="taal">CSS</div>
-                  <div class="taal">PHP</div>
-                  <div class="taal">JavaScript</div>
-                  <div class="taal">Java</div>
-                  <div class="taal">jQuery</div>
-                  <div class="taal">Python</div>
-                  <div class="taal">Bootstrap 5</div>
-              </div>
-              <!-- Cirkel voor klik hint -->
-              <div class="circle" style="animation-delay: -3s"></div>
-              <div class="circle" style="animation-delay: -2s"></div>
-              <div class="circle" style="animation-delay: -1s"></div>
-              <div class="circle" style="animation-delay: 0s"></div>
-          </div>
-      </div>
-  </section>
-
+        <div class="studies">
+            <p>Havo - St.Nicolaas Lyceum</p>
+            <p>MBO 4 - Applicatieontwikkelaar</p>
+            <p>HBO - Frontend Design & Development</p>
+        </div>
+    </section>
 </main>
-<script src="./scripts/script.js"></script>
 
 <%- include('./partials/foot') %>
