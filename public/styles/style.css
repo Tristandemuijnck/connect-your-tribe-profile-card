@@ -1,5 +1,5 @@
 /* Reset */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,4 +21,315 @@ html{
 body{
     font: 100%/1.4 Poppins, sans-serif;
     background-color: black;
+}
+
+/* Background crosses */
+.crossesMain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 40%;
+}
+
+.cross{
+    width: 33%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    background: red;
+    height: 200px;
+    position: relative;
+    width: 40px;
+    transform: rotate(45deg);
+}
+
+.cross:after{
+    background: red;
+    content: "";
+    height: 40px;
+    left: -80px;
+    position: absolute;
+    top: 80px;
+    width: 200px;
+    transform: rotate(0deg);
+}
+
+/* Hero section */
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1{
+    color: white;
+    text-align: center;
+    font-variant: small-caps;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.hero h1::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.hero h1::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.scroll-down{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 1em;
+    left: 0;
+    margin: auto auto 10px auto;
+    width: 34px;
+    height: 55px;
+}
+
+.mouse{
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller{
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
+
+/* Info section */
+.info{
+    height: 50vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container{
+    height: 50vh;
+    width: 100%;
+}
+
+.pf-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.info-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(72, 70, 70, 0.55);
+    padding: 0.6em 0.6em;
+}
+
+.info-text p{
+    color: white;
+}
+
+.name{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* Skills section */
+.skills{
+    position: relative;
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1em;
+    background: black;
+    justify-items: center;
+}
+
+.skill{
+    width: 80%;
+    border: solid 1px black;
+    border-radius: 0.2em;
+    background: white;
+}
+
+.progress{
+    border-radius: 0.2em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.skill:nth-child(1) .progress{
+    background: rgba(172, 255, 47, 1);
+    width: 80%;
+}
+
+.skill:nth-child(2) .progress{
+    background: rgba(255, 166, 0, 0.8);
+    width: 75%;
+}
+
+.skill:nth-child(3) .progress{
+    background: rgba(0, 255, 255, 0.8);
+    width: 65%;
+}
+
+.skill:nth-child(4) .progress{
+    background: rgba(255, 62, 62, 0.8);
+    width: 70%;
+}
+
+.skill:nth-child(5) .progress{
+    background: rgba(255, 192, 203, 0.8);
+    width: 40%;
+}
+
+.skill:nth-child(6) .progress{
+    background: rgba(175, 88, 175, 0.8);
+    width: 35%;
+}
+
+.skills-container p{
+    color: black;
+    font-weight: 600;
+    padding: 0.3em 0 0.3em 0.8em;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.social-img{
+    width: 2em;
+}
+
+/* Extra section */
+.description-cards{
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease-in-out;
+    transform-origin: center right;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.card-face{
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.back-card{
+    transform: rotateY(180deg);
+}
+
+.extra{
+    height: 50vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.is-flipped{
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.hobbies{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1em;
+    background: black;
+    justify-items: center;
+}
+
+.hobby{
+    width: 80%;
+    border-radius: 0.2em;
+    background: white;
+    padding: 0.4em;
+}
+
+.hobby p{
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hobby:nth-child(1){
+    background: rgba(172, 255, 47, 1);
+}
+
+.hobby:nth-child(2){
+    background: rgba(255, 166, 0, 0.8);
+}
+
+.hobby:nth-child(3){
+    background: rgba(0, 255, 255, 0.8);
+}
+
+.hobby:nth-child(4){
+    background: rgba(255, 62, 62, 0.8);
+}
+
+.studies{
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.6em;
+}
+
+.studies p{
+    color: white;
 }
