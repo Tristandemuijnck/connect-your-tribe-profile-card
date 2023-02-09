@@ -114,6 +114,11 @@ body{
     border-radius: 25px;
     opacity: 0.75;
     box-sizing: content-box;
+    transition: transform 100ms;
+}
+
+.mouse:hover{
+    transform: scale(1.2);
 }
 
 .scroller{
@@ -251,6 +256,11 @@ body{
 
 .social-img{
     width: 2em;
+    transition: transform 200ms;
+}
+
+.social-img:hover{
+    transform: scale(1.2);
 }
 
 /* Extra section */
@@ -332,6 +342,25 @@ body{
 
 .studies p{
     color: white;
+}
+
+.clicker{
+    position: absolute;
+    bottom: 3em;
+    right: 3em;
+    border-bottom: dotted 2px white;
+    transition: transform 200ms;
+}
+
+.clicker:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    border-bottom: solid 2px white;
+}
+
+.click-here{
+    color: white;
+    font-weight: 600;
 }
 
 /* Media Queries */
