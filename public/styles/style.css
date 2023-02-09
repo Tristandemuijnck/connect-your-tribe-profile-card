@@ -333,3 +333,65 @@ body{
 .studies p{
     color: white;
 }
+
+/* Media Queries */
+
+@media (min-width: 601px){
+    .info{
+        flex-direction: row;
+    }
+
+    .img-container{
+        background: black;
+        padding-top: 3em;
+    }
+
+    .pf-img{
+        object-fit: contain;
+    }
+
+    .info-text{
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background: black;
+        padding-left: 1.5em;
+    }
+
+    .studies{
+        padding: 0 2em;
+    }
+}
+
+@media (min-width: 1000px){
+    .img-container{
+        background: black;
+        padding-top: 3em;
+    }
+
+    .pf-img{
+        object-fit: contain;
+    }
+
+    .info-text{
+        padding-left: 1em;
+    }
+
+    .skill{
+        max-width: 70%;
+    }
+
+    .hobby{
+        max-width: 70%;
+    }
+
+    .studies{
+        padding: 0 3em;
+        flex-direction: row;
+        column-gap: 2em;
+        justify-content: center;
+    }
+}
