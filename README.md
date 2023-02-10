@@ -1,30 +1,45 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+# Visitekaartje
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
-
-## Inhoudsopgave
-
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
+## Titel
+Visitekaartje
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+Dit is de repository van mijn uitvoering van connect-your-tribe-profile-card - Visitekaartje.
 
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+### Preview
+<img src="https://user-images.githubusercontent.com/43402897/218087856-49eeea45-5423-4cdb-ab40-95b124a27ea8.png" width=700>
 
-## Installatie
+## :mag: Kenmerken
 
-## Gebruik
+### :page_facing_up: HTML
 
-## Bronnen
+Voor de layout maak ik gebruik van: 
+
+  - EJS om partials in te laden voor de header en footer
+  
+### :art: CSS
+
+Een aantal belangrijke css onderdelen zijn de media queries. Deze worden gebruikt voor het responsive maken van de website.
+Ik heb ze op de volgende plekken neergezet:
+
+* 600px
+* 1000px
+
+### :loop: JavaScript
+
+Een belangrijk stukje code voor het visitekaartje is de card flip:
+
+```
+var infoCard = document.querySelector(".description-cards");
+
+infoCard.addEventListener("click", () => {
+    infoCard.classList.toggle("is-flipped");
+});
+```
+
+
+## Live versie
+Voor een live versie van het project: https://colorful-ant-uniform.cyclic.app/
 
 ## Licentie
 
